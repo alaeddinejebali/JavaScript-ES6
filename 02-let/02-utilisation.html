@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Test</title>
+        <style type="text/css">
+            li{margin: 10px 0; padding: 5px; cursor: pointer;}
+            li:hover{background-color: #ddd;}
+        </style>
+    </head>
+    <body>
+        <ul id="mesElements"></ul>
+        
+        <script type="text/javascript">
+            var mesElements  = document.getElementById("mesElements");
+            for(var i=1 ; i<=5 ; i++){
+                var unElement = document.createElement("li");
+                unElement.appendChild(document.createTextNode("Element #" + i));
+                unElement.onclick = function(e){console.log("Element #" + i)};
+                mesElements.appendChild(unElement);
+            }
+        </script>
+    </body>
+</html>
